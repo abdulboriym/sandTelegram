@@ -2,6 +2,11 @@ function send() {
     let message = document.getElementById('message').value;
     let username = document.getElementById('username').value;
     let phone = document.getElementById('phone').value;
+    if(message == '' || username == '' || phone == ''){
+        alert("Formani to'liq to'ldiring");
+      } else{
+        sendtelegram(message, username, phone);
+      }
 
     sendtelegram(message, username, phone);
 }
